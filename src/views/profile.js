@@ -1,16 +1,20 @@
 // src/views/profile.js
+import React from "react";
 
-import React from 'react';
-
-import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
-
+import {withAuthenticationRequired} from '@auth0/auth0-react';
+import User from "../components/user";
 
 const Profile = () => {
-  const { user } = useAuth0();
-  const { name, picture, email } = user;
+  return(<>
+  TollBar
+  User
+  UserTable
+  <User/>
+  
+  </>
 
-  return (
-    <></>
-  );
-};
+  )};
+
+
+
 export default withAuthenticationRequired(Profile);
